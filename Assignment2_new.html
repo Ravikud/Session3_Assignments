@@ -1,0 +1,49 @@
+<html>
+
+<head>
+</head>
+<body>
+    <script>
+	function Calculate(num1,num2){
+	this.num1 = num1;
+	this.num2 = num2;
+	var num3 = 10;
+	this.add = function(){
+		//alert("First Number is "+num1+" and Second Number is "+num2);
+		console.log("First Number is "+num1+" and Second Number is "+num2);
+		
+		console.log("Addition of numbers is: "+(this.num1+this.num2));
+		//current instance object
+	}
+	
+	this.subtract = function(){
+		console.log("Subtraction of numbers is: "+(this.num1-this.num2));
+	}
+	
+	this.multiply = function(){
+	console.log("Multiplication of numbers is: "+(this.num1*this.num2));
+	}
+	
+	this.divide = function(){
+		console.log("Division of numbers is: "+(this.num1/this.num2));
+	}
+	this.displayPrivate = function(){
+		//this instance function can have access to the private property.
+		console.log(num3);
+	}
+}
+
+//creating object of type Calculate
+var obOne = new Calculate(1,3);
+//calling the sayCalculate function for obOne object
+obOne.add();
+obOne.subtract();
+obOne.multiply();
+obOne.divide();
+
+//displaying private property using the public function
+obOne.displayPrivate();
+    </script>
+</body>
+
+</html>
